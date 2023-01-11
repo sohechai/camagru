@@ -1,0 +1,89 @@
+section.loginContainer {
+	display: block;
+	justify-content: center;
+	text-align: center;
+	background-color: rgba($color: white, $alpha: 0.01);
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	width: 300px;
+	height: 32vh;
+	border-radius: 8px;
+	align-items: flex-start;
+	padding: 24px;
+	justify-content: center;
+}
+
+div.signUpContainer {
+	margin-top: 32px;
+	font-size: 12px;
+
+	> p > span {
+		cursor: pointer;
+	}
+
+	> span {
+		cursor: pointer;
+	}
+
+	.su {
+		display: inline-block;
+		position: relative;
+		color: #e3c61c;
+	}
+	
+	.su::after{
+		content: '';
+		position: absolute;
+		width: 100%;
+		transform: scaleX(0);
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		background-color: #e3c61c;
+		transform-origin: bottom right;
+		transition: transform 0.25s ease-out;
+	}
+
+	.su:hover::after {
+		transform: scaleX(1);
+		transform-origin: bottom left;
+		cursor: pointer;
+	}
+}
+
+div.header {
+	> img {
+		width: 200px;
+	}
+}
+
+div.signInForm {
+	height: 40vh;
+	width: 100%;
+	display: block;
+
+	> input {
+		padding: 16px;
+		width: 200px;
+		margin: 4px;
+		border-radius: 4px;
+		border: none;
+		font-family: Verdana, sans-serif; 
+	}
+
+	> button {
+		padding: 8px;
+		width: 220px;
+		border-radius: 4px;
+		border: none;
+		background-color: white;
+		cursor: pointer;
+		margin-top: 16px;
+		font-family: Verdana, sans-serif; 
+	}
+	.log:hover {
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		background-color: #e3c61c;
+		color: white;
+		transition-duration: 0.3s;
+	}
+}

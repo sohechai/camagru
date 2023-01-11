@@ -1,15 +1,15 @@
-@font-face {
-	font-family: "Open Sans";
-	src: url("../fonts/Typewriter_Condensed_Demi.woff2") format("woff2"),
-		   url("../fonts/Typewriter_Condensed_Demi.woff") format("woff");
-}
+// @font-face {
+// 	font-family: "Open Sans";
+// 	src: url("../fonts/Typewriter_Condensed_Demi.woff2") format("woff2"),
+// 		   url("../fonts/Typewriter_Condensed_Demi.woff") format("woff");
+// }
 
 html {
 	height: 100%;
 }
 
 body {
-	position: absolute;
+	// position: absolute;
 	height: auto;
 	top:0;
 	bottom:0;
@@ -18,9 +18,17 @@ body {
 	background: #3f4143;
 	background-size: cover;
 	background-position: center;
-	letter-spacing: 4px;
 	color: white;
-	font-family: 'Open sans';
+	font-family: Verdana, sans-serif; 
+	textarea:focus, input:focus{
+		outline: none;
+		border: none;
+		color: white;
+		caret-color: #e3c61c;
+	}
+	*:focus {
+		outline: none;
+	}
 }
 
 .white-content {
@@ -38,5 +46,92 @@ a {
 }
 
 section.container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
+section.navBarContainer {
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	height: 70px;
+	background-color: rgba($color: lightblue, $alpha: 0.1);
+	display: flex;
+
+	div.headerLeft {
+		flex: 1;
+		text-align: left;
+		
+		> img {
+			width: 200px;
+			height: auto;
+			cursor: pointer;
+		}
+	}
+
+	div.searchBar {
+		margin: auto;
+		display: flex;
+		width: 250px;
+		height: 50px;
+		// background-color: red;
+		> .MuiSvgIcon-root {
+			// background-color: blue;
+			margin: auto;
+			padding: 14px;
+			border-radius: 0 4px 4px 0;
+			cursor: pointer;
+			background-color: rgba($color: white, $alpha: 0.1);
+			width: 20px;
+			// height: 50px;
+			
+			&:hover {
+				// color: #e3c61c;
+				background-color: #e3c61c;
+				transition: 0.3s;
+			}
+		}
+
+
+		> input {
+			background-color: rgba($color: white, $alpha: 0.1);
+			border: none;
+			width: 200px;
+			height: 20px;
+			margin: auto;
+			padding: 16px;
+			border-radius: 4px 0 0 4px;
+			font-family: Verdana, sans-serif;
+		}
+		
+		
+		
+	}
+
+	div.headerRight {
+		flex: 1;
+		text-align: right;
+		// right: 0%;
+		padding: 20px;
+
+		> .MuiSvgIcon-root {
+			margin-left: 16px;
+			float: right;
+			font-size: 24px;
+			cursor: pointer;
+			&:hover {
+				color: #e3c61c;
+				// background-color: #e3c61c;
+				transition: 0.3s;
+			}
+		}
+	}
 }

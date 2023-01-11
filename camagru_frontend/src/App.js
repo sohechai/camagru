@@ -1,9 +1,16 @@
 import './styles/style.scss'
+import LoginPage from './pages/loginPage';
+import SignUpPage from './pages/signUpPage';
+import NavBar from './components/navBar';
 
 function App() {
   return (
     <section className='container'>
-		<h1>HELLO WORLD !</h1>
+		<NavBar />
+		{/* <LoginPage /> */}
+		{/* <SignUpPage /> */}
+		{/* Gallery */}
+		{/* footer */}
 	</section>
   );
 }
