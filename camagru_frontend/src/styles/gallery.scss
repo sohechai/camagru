@@ -1,0 +1,52 @@
+section.galleryContainer {
+	height: 85%;
+	width: 100%;
+	padding: 32px;
+	display: flex;
+	justify-content: center;
+}
+
+div.galleryGrid {
+	width: 95%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 8px;
+	align-items: center;
+	margin-top: 64px;
+}
+
+div.gallerySquare {
+	display: flexbox;
+	justify-content: center;
+	> img {
+		width: 350px;
+	}
+
+	> p {
+		font-size: 12px;
+		align-items: center;
+		display: flex;
+
+		> .MuiSvgIcon-root {
+			color: #e3c61c;
+			margin: 0 4px 0 4px;
+			font-size: 15px;
+			align-items: center;
+			cursor: pointer;
+		}
+	}
+}
+
+div.commentSection {
+	// display: inline-flex;
+	height: 100px;
+	overflow-x: scroll;
+	> p {
+		font-size: 11px;
+		align-items: flex-start;
+
+		> span {
+			font-size: 14px;
+		}
+	}
+}

@@ -8,6 +8,11 @@ html {
 	height: 100%;
 }
 
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 body {
 	// position: absolute;
 	height: auto;
@@ -82,17 +87,14 @@ section.navBarContainer {
 		display: flex;
 		width: 250px;
 		height: 50px;
-		// background-color: red;
 		> .MuiSvgIcon-root {
-			// background-color: blue;
 			margin: auto;
 			padding: 14px;
 			border-radius: 0 4px 4px 0;
 			cursor: pointer;
 			background-color: rgba($color: white, $alpha: 0.1);
 			width: 20px;
-			// height: 50px;
-			
+
 			&:hover {
 				// color: #e3c61c;
 				background-color: #e3c61c;

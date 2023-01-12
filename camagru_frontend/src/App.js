@@ -2,6 +2,8 @@ import './styles/style.scss'
 import LoginPage from './pages/loginPage';
 import SignUpPage from './pages/signUpPage';
 import NavBar from './components/navBar';
+import Gallery from './components/gallery';
+import PhotoEdit from './pages/photoEdit';
 
 function App() {
   return (
@@ -9,7 +11,8 @@ function App() {
 		<NavBar />
 		{/* <LoginPage /> */}
 		{/* <SignUpPage /> */}
-		{/* Gallery */}
+		{/* <Gallery /> */}
+		<PhotoEdit />
 		{/* footer */}
 	</section>
   );
