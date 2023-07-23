@@ -5,10 +5,10 @@ section.loginContainer {
 	background-color: rgba($color: white, $alpha: 0.01);
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	width: 300px;
-	height: 32vh;
+	height: 450px;
 	border-radius: 8px;
 	align-items: flex-start;
-	padding: 24px;
+	padding: 2rem;
 	justify-content: center;
 }
 
@@ -57,7 +57,7 @@ div.header {
 }
 
 div.signInForm {
-	height: 40vh;
+	// height: 100%;
 	width: 100%;
 	display: block;
 

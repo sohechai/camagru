@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  nginx:
+    build:
+      context: ./
+      dockerfile: ./web/Dockerfile
+    ports:
+      - "8000:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./html:/var/www/html
+      - ./html/css/:/var/www/html/css
+      - ./html/pages/:/var/www/html/pages
+    depends_on:
+      - php
+    networks:
+      - app_network
+
+  php:
+    image: php:7.4-fpm
+    volumes:
+      - ./html:/var/www/html
+      - ./html/css/:/var/www/html/css
+      - ./html/pages/:/var/www/html/pages
+    networks:
+      - app_network
+
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: your_postgres_username
+      POSTGRES_PASSWORD: your_postgres_password
+      POSTGRES_DB: your_postgres_database
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  pgdata:

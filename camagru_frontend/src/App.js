@@ -8,11 +8,11 @@ import PhotoEdit from './pages/photoEdit';
 function App() {
   return (
     <section className='container'>
-		<NavBar />
-		{/* <LoginPage /> */}
+		{/* <NavBar /> */}
+		<LoginPage />
 		{/* <SignUpPage /> */}
 		{/* <Gallery /> */}
-		<PhotoEdit />
+		{/* <PhotoEdit /> */}
 		{/* footer */}
 	</section>
   );
