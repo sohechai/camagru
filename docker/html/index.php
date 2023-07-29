@@ -1,3 +1,7 @@
+<?php
+require_once '/var/www/html/php/models/db.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

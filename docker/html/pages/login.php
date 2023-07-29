@@ -12,17 +12,39 @@
 				<img src="../images/logo.png" alt="logo" />
 			</div>
 			<div class='signInForm'>
-				<input type="text" id="username" name="username" placeholder="username" />
-				<input type="text" id="password" name="password" placeholder="password" />
-				<button class='log'>Log in</button>
-				<div class='signUpContainer'>
-					<p>
-						Don't have an account?&nbsp;
-						<a href="/pages/signup.php" class='su'>Sign up</a>
-					</p>
-					<span class='su'>Forgot password?</span>
-				</div>
+				<?php
+					require_once '/var/www/html/php/models/db.php';
+
+					if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+						if (isset($_POST['username']) && isset($_POST['password'])) {
+							$username = $_POST['username'];
+							$password = $_POST['password'];
+
+							$user = DB::authenticateUser($username, $password);
+
+							if ($user) {
+								echo "<p>Bienvenue, " . $user['username'] . " !</p>";
+							} else {
+								echo "<p>Identifiants invalides. Veuillez réessayer.</p>";
+							}
+						}
+					}
+				?>
+
+				<form method="post">
+					<input type="text" id="username" name="username" placeholder="username" required>
+					<input type="password" id="password" name="password" placeholder="password" required>
+					<button type="submit" class='log'>Log in</button>
+					<div class='signUpContainer'>
+						<p>
+							Don't have an account?&nbsp;
+							<a href="/pages/signup.php" class='su'>Sign up</a>
+						</p>
+						<span class='su'>Forgot password?</span>
+					</div>
+				</form>
 			</div>
 		</section>
 	</section>
 </html>
+

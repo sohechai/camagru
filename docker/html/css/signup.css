@@ -68,7 +68,7 @@ div.signUpForm {
 	display: block;
 }
 
-div.signUpForm > input {
+div.signUpForm > form > input {
 	color: black;
 	padding: 16px;
 	width: 200px;
@@ -78,7 +78,7 @@ div.signUpForm > input {
 	font-family: Verdana, sans-serif; 
 }
 
-div.signUpForm > button {
+div.signUpForm > form >button {
 	padding: 8px;
 	width: 220px;
 	border-radius: 4px;

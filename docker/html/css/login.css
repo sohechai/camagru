@@ -55,7 +55,7 @@ div.signInForm {
 	display: block;
 }
 
-div.signInForm>input {
+div.signInForm>form>input {
 	color: black;
 	padding: 16px;
 	width: 200px;
@@ -65,7 +65,7 @@ div.signInForm>input {
 	font-family: Verdana, sans-serif;
 }
 
-div.signInForm>button {
+div.signInForm>form>button {
 	padding: 8px;
 	width: 220px;
 	border-radius: 4px;
@@ -76,7 +76,7 @@ div.signInForm>button {
 	font-family: Verdana, sans-serif;
 }
 
-div.signInForm>button.log:hover {
+div.signInForm>form>button.log:hover {
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	background-color: #e3c61c;
 	color: white;
