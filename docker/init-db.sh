@@ -3,7 +3,7 @@
 set -e
 
 # wait service postgres
-until psql -h postgres -U $POSTGRES_USER -c '\l'; do
+until psql -h $POSTGRES_HOST -U $POSTGRES_USER -c '\l'; do
   echo "Attente du démarrage du serveur PostgreSQL..."
   sleep 2
 done

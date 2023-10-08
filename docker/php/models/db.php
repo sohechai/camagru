@@ -22,7 +22,6 @@ class DB {
 		$rowCount = $stmt->rowCount();
 	
 		if ($rowCount > 0) {
-			echo 'Un utilisateur avec cette adresse e-mail existe déjà.';
 			return false;
 		} else {
 			$stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
@@ -42,13 +41,9 @@ class DB {
         $stmt->execute();
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-		echo"user=";
-		echo $user;
         if ($user && password_verify($password, $user['password'])) {
-			echo "user found\n";
             return $user;
         } else {
-			echo "user not found\n";
             return false;
         }
     }

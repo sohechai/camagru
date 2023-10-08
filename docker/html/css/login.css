@@ -2,8 +2,7 @@ div.loginContainer {
 	display: block;
 	justify-content: center;
 	text-align: center;
-	background-color: rgba(255, 255, 255, 0.01);
-	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
 	width: 300px;
 	height: 410px;
 	border-radius: 8px;
@@ -24,7 +23,8 @@ div.signUpContainer>span {
 .su {
 	display: inline-block;
 	position: relative;
-	color: #e3c61c;
+	color: #44E4AB;
+	font-weight: 400;
 }
 
 .su::after {
@@ -35,7 +35,7 @@ div.signUpContainer>span {
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: #e3c61c;
+	background-color: #44E4AB;
 	transform-origin: bottom right;
 	transition: transform 0.25s ease-out;
 }
@@ -47,7 +47,8 @@ div.signUpContainer>span {
 }
 
 div.header>img {
-	width: 200px;
+	height: 26px;
+	padding: 48px;
 }
 
 div.signInForm {
@@ -57,28 +58,29 @@ div.signInForm {
 
 div.signInForm>form>input {
 	color: black;
-	padding: 16px;
+	font-weight: lighter;
+	padding: 8px;
 	width: 200px;
-	margin: 4px;
 	border-radius: 4px;
-	border: none;
-	font-family: Verdana, sans-serif;
+	margin-top: 8px;
+	border-radius: 4px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 div.signInForm>form>button {
 	padding: 8px;
 	width: 220px;
 	border-radius: 4px;
-	border: none;
 	background-color: white;
+	color: #44E4AB;
 	cursor: pointer;
 	margin-top: 16px;
-	font-family: Verdana, sans-serif;
+	border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 div.signInForm>form>button.log:hover {
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	background-color: #e3c61c;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	background-color: #44E4AB;
 	color: white;
 	transition-duration: 0.3s;
 }

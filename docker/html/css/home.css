@@ -1,0 +1,131 @@
+.navbar {
+	width: 1130px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	height: 75px;
+}
+
+.navbar-logo img {
+	width: 126px;
+}
+
+.navbar-icons {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-icons a {
+	font-size: 16px;
+	margin-left: 45px;
+	cursor: pointer;
+}
+
+.navbar-icons i {
+	font-size: 20px;
+
+	cursor: pointer;
+	margin-left: 45px;
+	/* background-color: red; */
+}
+
+.navbar-icons i:hover {
+	color: #44E4AB;
+}
+
+.navbar-icons a:active {
+	color: #44E4AB;
+	font-weight: bold;
+}
+
+.navbar-icons a:hover {
+	color: #44E4AB;
+}
+
+.home-container {
+	width: 100vw;
+	height: calc(100vh - 75px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image:
+	url("../images/home-bg-pictures.png"),
+    url("../images/home-bg.png");
+	background-size: 
+    auto,
+    contain;
+	background-repeat: 
+    no-repeat,
+    no-repeat;
+	background-position: 
+    calc(50% + 154px) center,
+    center;
+}
+
+.title-container {
+	transform: rotate(-10deg);
+	width: 1130px;
+	margin: auto;
+	height: 30vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	display: flex;
+}
+
+.diagonal-title {
+	/* margin-left: 160px; */
+	width: auto;
+	display: flex;
+}
+
+.diagonal-title p {
+	font-size: 48px;
+	font-weight: 500;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	margin: 4px;
+	padding: 16px 24px 16px 0;
+	background-color: white;
+	border-radius: 64px;
+}
+
+.diagonal-title p i.fa-shapes {
+	color: #44E4AB;
+	font-size: 40px;
+	margin-left: 8px;
+}
+
+.diagonal-title p i.fa-heart {
+	color: red;
+	font-size: 32px;
+	margin-left: 8px;
+}
+
+.button-container {
+	display: inline-flex;
+	align-items: center;
+}
+
+.button-container p {
+	display: flex;
+	margin: 4px 0 0 4px;
+	justify-content: center;
+	align-items: center;
+	width: 116px;
+	font-size: 18px;
+	padding: 8px;
+	border-radius: 24px;
+	background-color: black;
+	color: white;
+}
+
+.button-container i {
+	cursor: pointer;
+	background-color: #44E4AB;
+	margin-left: -10px;
+	padding: 8px;
+	border-radius: 50%;
+}
