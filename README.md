@@ -1,6 +1,5 @@
-# camagru
+# Camagru
 
-Camagru
 Camagru is a web application that allows users to edit their photos and videos using a webcam and predefined images.
 
 ## Features
