@@ -10,7 +10,9 @@ Camagru is a web application that allows users to edit their photos and videos u
 - Public images with the ability to like and comment
 
 ## Stack
-- ReactJS
-- Material UI
-- NestJS
-- PostgreSQL
+- PHP
+- HTML / CSS
+- Postgres
+- PGadmin
+- Nginx
+- Docker
