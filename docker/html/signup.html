@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/signup.css" />
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+    <body>
+        <section class="container">
+            <div class="signUpContainer">
+                <div class="header">
+                    <img src="/logo.png" alt="logo" />
+                    <p>Sign up to see photos and videos from your friends.</p>
+                </div>
+                <div class="signUpForm">
+                    <form method="post">
+                        <input
+                            type="text"
+                            id="email"
+                            name="email"
+                            placeholder="email"
+                            value="<?php echo isset($email) ? htmlspecialchars($email) : ''; ?>"
+                        />
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="username"
+                            value="<?php echo isset($username) ? htmlspecialchars($username) : ''; ?>"
+                        />
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="password"
+                        />
+
+                        <button class="su">Sign up</button>
+                        <?php if (!empty($errors)) { echo '
+                        <div class="error">
+                            '. implode('<br />', $errors) .'
+                        </div>
+                        '; } ?>
+
+                        <div class="signInContainer">
+                            <p>
+                                Have an account?&nbsp;
+                                <a href="/login.php" class="si">Log in</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

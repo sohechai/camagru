@@ -1,0 +1,88 @@
+.gallery-container {
+    width: 1130px;
+    margin: auto;
+    padding-top: 96px;
+    height: calc(100vh - 75px);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 117px;
+    width: 100%;
+    background-color: white;
+}
+
+.header-left,
+.header-right {
+    margin-top: 60px;
+    font-size: 24px;
+}
+
+.images-container {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 80px;
+    margin: 20px;
+}
+
+.image-container {
+    position: relative;
+    /* overflow: hidden; */
+    border: 1px solid #ccc;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: -20;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.image-overlay .actions {
+    display: flex;
+}
+
+.image-overlay .actions button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.image-overlay .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+}

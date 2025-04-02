@@ -1,0 +1,100 @@
+.photobooth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main,
+.side {
+    margin: 20px;
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+.center-container {
+    display: flex;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    /* border: 1px solid #44e4ab; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#captureImg {
+    display: flex;
+    align-self: center;
+    width: 24px;
+    height: auto;
+    padding: 8px;
+    margin: 8px;
+    background-color: #44e4ab;
+    border-radius: 50%;
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    /* flex: 1; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.image-list {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    overflow: scroll;
+
+    height: 500px;
+}
+
+.image-item {
+    padding: 8px;
+    position: relative;
+}
+
+.filter-list {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+
+.filter-item {
+    margin: 10px;
+    position: relative;
+    border: 1px solid #44e4ab;
+}
+
+#delete-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 2px;
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+}
+
+/* .image-item i {
+    font-size: 16px;
+} */
+
+#previewImage {
+    display: none;
+}
+
+.filter-item img.selected {
+    border: 2px solid red;
+}
+
+#selectedFilterImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 640px;
+    height: 480px;
+    pointer-events: none;
+}

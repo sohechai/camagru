@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/login.css" />
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+    <body>
+        <section class="container">
+            <div class="loginContainer">
+                <div class="header">
+                    <img src="/logo.png" alt="logo" />
+                </div>
+                <div class="signInForm">
+                    <form method="post">
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="username"
+                            required
+                        />
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="password"
+                            required
+                        />
+                        <?php if (!empty($errors)): ?>
+                        <div class="error">
+                            <?php foreach ($errors as $error): ?> <?php echo
+                            htmlspecialchars($error); ?> <?php endforeach; ?>
+                        </div>
+                        <?php endif; ?>
+                        <button type="submit" class="log">Log in</button>
+                        <div class="signUpContainer">
+                            <p>
+                                Don't have an account?&nbsp;
+                                <a href="/signup.php" class="su">Sign up</a>
+                            </p>
+                            <span class="su">Forgot password?</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
