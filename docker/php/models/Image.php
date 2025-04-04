@@ -53,5 +53,36 @@ class Image
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public static function incrementLikes($imageId)
+    {
+        $conn = DB::getConnection();
+        $stmt = $conn->prepare(
+            "UPDATE images SET likes_count = likes_count + 1 WHERE id = :imageId"
+        );
+        $stmt->bindParam(":imageId", $imageId);
+        return $stmt->execute();
+    }
+
+    public static function decrementLikes($imageId)
+    {
+        $conn = DB::getConnection();
+        $stmt = $conn->prepare(
+            "UPDATE images SET likes_count = GREATEST(likes_count - 1, 0) WHERE id = :imageId"
+        );
+        $stmt->bindParam(":imageId", $imageId);
+        return $stmt->execute();
+    }
+
+    public static function getLikesCount($imageId)
+    {
+        $conn = DB::getConnection();
+        $stmt = $conn->prepare(
+            "SELECT likes_count FROM images WHERE id = :imageId"
+        );
+        $stmt->bindParam(":imageId", $imageId);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC)['likes_count'];
+    }
 }
 ?>

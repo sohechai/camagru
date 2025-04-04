@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS images (
     id SERIAL PRIMARY KEY,
     user_id INT NOT NULL,
     image_data BYTEA NOT NULL,
+    likes_count INT DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
